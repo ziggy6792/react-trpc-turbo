@@ -2,9 +2,7 @@
   "name": "@repo/api",
   "private": true,
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
+  "main": "./dist/index.js",
   "scripts": {
     "dev:old": "NODE_ENV=development tsx watch src/server",
     "dev": "NODE_ENV=development rm -rf ./dist && rm -rf ./.out && tsc-watch --project tsconfig.watch.json --noEmit false --onSuccess 'pnpm dev:run'",
@@ -15,7 +13,7 @@
     "start": "node dist/server.js"
   },
   "dependencies": {
-    "@trpc/server": "^11.6.0",
+    "@trpc/server": "11.0.0-next-beta.289",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.17.1",
