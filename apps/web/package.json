@@ -11,8 +11,8 @@
   "dependencies": {
     "@tanstack/react-query": "^5.20.5",
     "@tanstack/react-router": "^1.16.2",
-    "@trpc/client": "11.0.0-next-beta.289",
-    "@trpc/react-query": "11.0.0-next-beta.289",
+    "@trpc/client": "11.6.0",
+    "@trpc/react-query": "11.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "superjson": "^2.2.1",
