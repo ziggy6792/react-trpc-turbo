@@ -2,19 +2,16 @@
   "name": "@repo/api",
   "private": true,
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "scripts": {
     "dev:old": "NODE_ENV=development tsx watch src/server",
-    "dev": "rm -rf ./dist && rm -rf ./.out && tsx watch src/server --project tsconfig.watch.json",
+    "dev": "NODE_ENV=development rm -rf ./dist && rm -rf ./.out && tsc-watch --project tsconfig.watch.json --noEmit false --onSuccess 'node -r dotenv/config ./dist/server.js'",
     "lint": "eslint --cache --ext \".js,.ts,.tsx\" src",
     "type-check": "tsc",
     "build": "rimraf dist && tsc --noEmit false && tsc-alias",
     "start": "node dist/server.js"
   },
   "dependencies": {
-    "@trpc/server": "11.0.0-next-beta.289",
+    "@trpc/server": "^11.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.17.1",
@@ -32,6 +29,7 @@
     "eslint": "^8.56.0",
     "rimraf": "^5.0.5",
     "tsc-alias": "^1.8.8",
+    "tsc-watch": "^7.2.0",
     "tsx": "^4.0.0",
     "typescript": "^5.3.3"
   }

@@ -2,7 +2,7 @@ import { initTRPC, type inferRouterInputs, type inferRouterOutputs } from '@trpc
 import type { Request, Response } from 'express';
 import superjson from 'superjson';
 
-import type { AppRouter } from '@api/router';
+import type { AppRouter } from './router';
 
 type Context = {
   req: Request;
