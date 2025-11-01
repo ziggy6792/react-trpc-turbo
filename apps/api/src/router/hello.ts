@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { publicProcedure, router } from '../trpc';
+import { publicProcedure, router } from '@api/trpc';
 
 export const schema = z.object({
   name: z.string(),

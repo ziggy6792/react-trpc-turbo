@@ -1,5 +1,5 @@
-import { router } from '../trpc';
-import { helloRouter } from './hello';
+import { router } from '@api/trpc';
+import { helloRouter } from '@api/router/hello';
 
 export const appRouter = router({
   hello: helloRouter,

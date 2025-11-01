@@ -5,7 +5,9 @@
     "outDir": "dist",
 
     "baseUrl": ".",
-
+    "paths": {
+      "@api/*": ["./src/*"]
+    },
     "rootDir": "./src"
   },
   "tsc-alias": {

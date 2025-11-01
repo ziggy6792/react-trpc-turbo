@@ -3,7 +3,7 @@ import cors from 'cors';
 import 'dotenv/config';
 import express from 'express';
 
-import { appRouter } from './router';
+import { appRouter } from '@api/router';
 
 async function main() {
   const port = process.env.PORT || 3000;
