@@ -2,9 +2,13 @@
   "name": "@repo/api",
   "private": true,
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
     "dev:old": "NODE_ENV=development tsx watch src/server",
-    "dev": "NODE_ENV=development rm -rf ./dist && rm -rf ./.out && tsc-watch --project tsconfig.watch.json --noEmit false --onSuccess 'node -r dotenv/config ./dist/server.js'",
+    "dev": "NODE_ENV=development rm -rf ./dist && rm -rf ./.out && tsc-watch --project tsconfig.watch.json --noEmit false --onSuccess 'pnpm dev:run'",
+    "dev:run": "tsc-alias && node -r dotenv/config ./dist/server.js",
     "lint": "eslint --cache --ext \".js,.ts,.tsx\" src",
     "type-check": "tsc",
     "build": "rimraf dist && tsc --noEmit false && tsc-alias",
