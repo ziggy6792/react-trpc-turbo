@@ -1,9 +1,12 @@
 {
   "extends": "@repo/typescript-config/node.json",
   "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
     "moduleResolution": "node",
     "outDir": "dist",
-
+    "declaration": true,
+    "declarationMap": true,
     "baseUrl": ".",
     "paths": {
       "@api/*": ["./src/*"]
